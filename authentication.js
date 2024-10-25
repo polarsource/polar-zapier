@@ -123,6 +123,7 @@ module.exports = {
       required: true,
       label: 'Environment',
       type: 'string',
+      helpText: 'Use the sandbox environment for testing and development. Read more: https://docs.polar.sh/sandbox',
     },
   ],
   oauth2Config: {
