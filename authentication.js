@@ -1,4 +1,5 @@
 const { getAPIURL, getFrontendURL } = require('./environments');
+const scopes = require('./scope');
 
 const test = async (z, bundle) => {
   const options = {
@@ -129,7 +130,7 @@ module.exports = {
     getAccessToken: getAccessToken,
     refreshAccessToken: refreshAccessToken,
     enablePkce: true,
-    scope: 'openid email profile orders:read webhooks:read webhooks:write',
+    scope: scopes.join(' '),
     autoRefresh: true,
   },
   connectionLabel: connectionLabel,

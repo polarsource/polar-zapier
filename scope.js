@@ -1,0 +1,26 @@
+const SCOPES = [
+  'openid',
+  'profile',
+  'email',
+  'organizations:read',
+  'organizations:write',
+  'checkout_links:read',
+  'checkout_links:write',
+  'checkouts:read',
+  'checkouts:write',
+  'products:read',
+  'products:write',
+  'benefits:read',
+  'benefits:write',
+  'files:read',
+  'files:write',
+  'subscriptions:read',
+  'subscriptions:write',
+  'orders:read',
+  'webhooks:read',
+  'webhooks:write',
+  'license_keys:read',
+  'license_keys:write',
+];
+
+module.exports = SCOPES;
