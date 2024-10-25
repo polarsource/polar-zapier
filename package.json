@@ -4,7 +4,8 @@
   "description": "An Open Source Lemon Squeezy alternative with better pricing! Get paid coding on your passion.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --testTimeout 10000"
+    "test": "jest --testTimeout 10000",
+    "format": "prettier --write \"**/*.js\""
   },
   "engines": {
     "node": ">=v18",
@@ -14,7 +15,8 @@
     "zapier-platform-core": "15.17.0"
   },
   "devDependencies": {
-    "jest": "^29.6.0"
+    "jest": "^29.6.0",
+    "prettier": "^3.3.3"
   },
   "private": true,
   "zapier": {

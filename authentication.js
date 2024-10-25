@@ -1,4 +1,4 @@
-const { getAPIURL, getFrontendURL } = require('./environments')
+const { getAPIURL, getFrontendURL } = require('./environments');
 
 const test = async (z, bundle) => {
   const options = {
@@ -25,7 +25,7 @@ const authorizeUrl = async (z, bundle) => {
   const url = `${getFrontendURL(bundle.inputData.environment || bundle.authData.environment)}/oauth2/authorize?sub_type=organization&client_id=${
     process.env.CLIENT_ID
   }&state=${bundle.inputData.state}&redirect_uri=${encodeURIComponent(
-    bundle.inputData.redirect_uri
+    bundle.inputData.redirect_uri,
   )}&response_type=code`;
 
   return url;
@@ -94,8 +94,7 @@ const refreshAccessToken = async (z, bundle) => {
 };
 
 const connectionLabel = async (z, bundle) => {
-  const environment =
-    bundle.inputData.environment || bundle.authData.environment;
+  const environment = bundle.inputData.environment || bundle.authData.environment;
   const isSandbox = environment === 'sandbox';
   return `${isSandbox ? '[SANDBOX] ' : ''}${bundle.inputData.name}`;
 };

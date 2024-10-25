@@ -1,5 +1,5 @@
 const authentication = require('./authentication');
-const orderCreatedTrigger = require('./triggers/order_created.js');
+const triggers = require('./triggers/index.js');
 
 module.exports = {
   version: require('./package.json').version,
@@ -11,5 +11,5 @@ module.exports = {
     },
     params: {},
   },
-  triggers: { [orderCreatedTrigger.key]: orderCreatedTrigger },
+  triggers: triggers.reduce((acc, trigger) => ({ ...acc, [trigger.key]: trigger }), {}),
 };
