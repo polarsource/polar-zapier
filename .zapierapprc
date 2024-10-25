@@ -1,4 +1,7 @@
 {
   "id": 214284,
-  "key": "App214284"
+  "key": "App214284",
+  "includeInBuild": [
+    "triggers/samples"
+  ]
 }
