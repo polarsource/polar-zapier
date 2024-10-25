@@ -1,0 +1,75 @@
+{
+  "id": "string",
+  "url": "string",
+  "customer_email": "string",
+  "customer_name": "string",
+  "product": {
+    "created_at": "2024-10-25T00:00:00.000Z",
+    "modified_at": "2024-10-25T00:00:00.000Z",
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "string",
+    "description": "string",
+    "is_recurring": false,
+    "is_archived": false,
+    "organization_id": "00000000-0000-0000-0000-000000000000",
+    "prices": [
+      {
+        "created_at": "2024-10-25T00:00:00.000Z",
+        "modified_at": "2024-10-25T00:00:00.000Z",
+        "id": "00000000-0000-0000-0000-000000000000",
+        "amount_type": "fixed",
+        "is_archived": false,
+        "product_id": "00000000-0000-0000-0000-000000000000",
+        "price_currency": "string",
+        "price_amount": 0,
+        "type": "recurring",
+        "recurring_interval": "month"
+      }
+    ],
+    "benefits": [
+      {
+        "created_at": "2024-10-25T00:00:00.000Z",
+        "modified_at": "2024-10-25T00:00:00.000Z",
+        "id": "00000000-0000-0000-0000-000000000000",
+        "type": "custom",
+        "description": "string",
+        "selectable": false,
+        "deletable": false,
+        "organization_id": "00000000-0000-0000-0000-000000000000"
+      }
+    ],
+    "medias": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "organization_id": "00000000-0000-0000-0000-000000000000",
+        "name": "string",
+        "path": "string",
+        "mime_type": "string",
+        "size": 0,
+        "storage_version": "string",
+        "checksum_etag": "string",
+        "checksum_sha256_base64": "string",
+        "checksum_sha256_hex": "string",
+        "last_modified_at": "2024-10-25T00:00:00.000Z",
+        "version": "string",
+        "service": "product_media",
+        "is_uploaded": false,
+        "created_at": "2024-10-25T00:00:00.000Z",
+        "size_readable": "string",
+        "public_url": "string"
+      }
+    ]
+  },
+  "product_price": {
+    "created_at": "2024-10-25T00:00:00.000Z",
+    "modified_at": "2024-10-25T00:00:00.000Z",
+    "id": "00000000-0000-0000-0000-000000000000",
+    "amount_type": "fixed",
+    "is_archived": false,
+    "product_id": "00000000-0000-0000-0000-000000000000",
+    "price_currency": "string",
+    "price_amount": 0,
+    "type": "recurring",
+    "recurring_interval": "month"
+  }
+}

@@ -11,8 +11,19 @@ const triggerKeys = triggers.map(({ key }) => key);
 
 describe('triggers', () => {
   test.each(triggerKeys)('trigger %s should run', async (key) => {
-    const bundle = { inputData: {} };
-    console.log(App.triggers);
+    const bundle = {
+      inputData: {},
+      cleanedRequest: {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        content: {
+          event: key,
+          data: {},
+        },
+      },
+    };
 
     const results = await appTester(App.triggers[key].operation.perform, bundle);
     expect(results).toBeDefined();

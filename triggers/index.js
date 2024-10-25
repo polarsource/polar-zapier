@@ -6,7 +6,7 @@ const generateSecret = async () => {
 };
 
 const perform = async (z, bundle) => {
-  return [bundle.cleanedRequest];
+  return [bundle.cleanedRequest.content.data];
 };
 
 const performSubscribe = (event) => async (z, bundle) => {
@@ -83,7 +83,11 @@ const performList = (path, sorting) => async (z, bundle) => {
   });
 };
 
-/** @type {{ event: string; path: string; sorting: string, key: string; label: string; description: string; noun: string }[]} */
+const loadSample = (event) => {
+  return require(`./samples/${event}.json`);
+};
+
+/** @type {{ event: string; path: string; sorting: string, key: string; label: string; description: string; noun: string, sample: object }[]} */
 const TRIGGER_DEFINITIONS = [
   {
     event: 'order.created',
@@ -93,6 +97,7 @@ const TRIGGER_DEFINITIONS = [
     label: 'Order Created',
     description: 'Triggers when a new order is created.',
     noun: 'Order',
+    sample: loadSample('order'),
   },
   {
     event: 'benefit.created',
@@ -102,6 +107,7 @@ const TRIGGER_DEFINITIONS = [
     label: 'Benefit Created',
     description: 'Triggers when a new benefit is created.',
     noun: 'Benefit',
+    sample: loadSample('benefit'),
   },
   {
     event: 'benefit.updated',
@@ -111,6 +117,7 @@ const TRIGGER_DEFINITIONS = [
     label: 'Benefit Updated',
     description: 'Triggers when a benefit is updated.',
     noun: 'Benefit',
+    sample: loadSample('benefit'),
   },
   {
     event: 'checkout.created',
@@ -120,6 +127,7 @@ const TRIGGER_DEFINITIONS = [
     label: 'Checkout Created',
     description: 'Triggers when a new checkout session is created.',
     noun: 'Checkout',
+    sample: loadSample('checkout'),
   },
   {
     event: 'checkout.updated',
@@ -129,6 +137,7 @@ const TRIGGER_DEFINITIONS = [
     label: 'Checkout Updated',
     description: 'Triggers when a checkout session is updated.',
     noun: 'Checkout',
+    sample: loadSample('checkout'),
   },
   {
     event: 'product.created',
@@ -138,6 +147,7 @@ const TRIGGER_DEFINITIONS = [
     label: 'Product Created',
     description: 'Triggers when a new product is created.',
     noun: 'Product',
+    sample: loadSample('product'),
   },
   {
     event: 'product.updated',
@@ -147,6 +157,7 @@ const TRIGGER_DEFINITIONS = [
     label: 'Product Updated',
     description: 'Triggers when a product is updated.',
     noun: 'Product',
+    sample: loadSample('product'),
   },
   {
     event: 'subscription.active',
@@ -156,6 +167,7 @@ const TRIGGER_DEFINITIONS = [
     label: 'Subscription Active',
     description: 'Triggers when a subscription becomes active.',
     noun: 'Subscription',
+    sample: loadSample('subscription'),
   },
   {
     event: 'subscription.canceled',
@@ -165,6 +177,7 @@ const TRIGGER_DEFINITIONS = [
     label: 'Subscription Canceled',
     description: 'Triggers when a subscription is canceled.',
     noun: 'Subscription',
+    sample: loadSample('subscription'),
   },
   {
     event: 'subscription.created',
@@ -174,6 +187,7 @@ const TRIGGER_DEFINITIONS = [
     label: 'Subscription Created',
     description: 'Triggers when a new subscription is created.',
     noun: 'Subscription',
+    sample: loadSample('subscription'),
   },
   {
     event: 'subscription.revoked',
@@ -183,6 +197,7 @@ const TRIGGER_DEFINITIONS = [
     label: 'Subscription Revoked',
     description: 'Triggers when a subscription is revoked.',
     noun: 'Subscription',
+    sample: loadSample('subscription'),
   },
   {
     event: 'subscription.updated',
@@ -192,16 +207,18 @@ const TRIGGER_DEFINITIONS = [
     label: 'Subscription Updated',
     description: 'Triggers when a subscription is updated.',
     noun: 'Subscription',
+    sample: loadSample('subscription'),
   },
 ];
 
-const TRIGGERS = TRIGGER_DEFINITIONS.map(({ event, path, sorting, key, label, description, noun }) => ({
+const TRIGGERS = TRIGGER_DEFINITIONS.map(({ event, path, sorting, key, label, description, noun, sample }) => ({
   operation: {
     perform: perform,
     type: 'hook',
     performUnsubscribe: performUnsubscribe,
     performSubscribe: performSubscribe(event),
     performList: performList(path, sorting),
+    sample,
   },
   display: {
     description,

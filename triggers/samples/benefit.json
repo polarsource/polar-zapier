@@ -1,0 +1,13 @@
+{
+  "created_at": "2024-10-25T00:00:00.000Z",
+  "modified_at": "2024-10-25T00:00:00.000Z",
+  "id": "00000000-0000-0000-0000-000000000000",
+  "type": "articles",
+  "description": "string",
+  "selectable": false,
+  "deletable": false,
+  "organization_id": "00000000-0000-0000-0000-000000000000",
+  "properties": {
+    "paid_articles": false
+  }
+}
