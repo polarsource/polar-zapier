@@ -6,7 +6,7 @@ const generateSecret = async () => {
 };
 
 const perform = async (z, bundle) => {
-  return [bundle.cleanedRequest.content.data];
+  return [bundle.cleanedRequest.data];
 };
 
 const performSubscribe = (event) => async (z, bundle) => {

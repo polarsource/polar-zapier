@@ -14,14 +14,8 @@ describe('triggers', () => {
     const bundle = {
       inputData: {},
       cleanedRequest: {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        content: {
-          event: key,
-          data: {},
-        },
+        event: key,
+        data: {},
       },
     };
 
