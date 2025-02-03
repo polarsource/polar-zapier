@@ -21,6 +21,8 @@ const SCOPES = [
   'webhooks:write',
   'license_keys:read',
   'license_keys:write',
+  'customers:read',
+  'customers:write',
 ];
 
 module.exports = SCOPES;
