@@ -1,0 +1,58 @@
+{
+  "id": "992fae2a-2a17-4b7a-8d9e-e287cf90131b",
+  "created_at": "2023-11-07T05:31:56Z",
+  "modified_at": "2023-11-07T05:31:56Z",
+  "metadata": {},
+  "external_id": "usr_1337",
+  "email": "customer@example.com",
+  "email_verified": true,
+  "name": "John Doe",
+  "billing_address": {
+    "line1": "<string>",
+    "line2": "<string>",
+    "postal_code": "<string>",
+    "city": "<string>",
+    "state": "<string>",
+    "country": "US"
+  },
+  "tax_id": ["911144442", "us_ein"],
+  "organization_id": "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
+  "active_subscriptions": [
+    {
+      "id": "e5149aae-e521-42b9-b24c-abb3d71eea2e",
+      "created_at": "2023-11-07T05:31:56Z",
+      "modified_at": "2023-11-07T05:31:56Z",
+      "custom_field_data": {},
+      "metadata": {},
+      "status": "active",
+      "amount": 1000,
+      "currency": "usd",
+      "recurring_interval": "month",
+      "current_period_start": "2025-02-03T13:37:00Z",
+      "current_period_end": "2025-03-03T13:37:00Z",
+      "cancel_at_period_end": false,
+      "canceled_at": null,
+      "started_at": "2025-01-03T13:37:00Z",
+      "ends_at": null,
+      "product_id": "d8dd2de1-21b7-4a41-8bc3-ce909c0cfe23",
+      "price_id": "196ca717-4d84-4d28-a1b8-777255797dbc",
+      "discount_id": null
+    }
+  ],
+  "granted_benefits": [
+    {
+      "id": "d322132c-a9d0-4e0d-b8d3-d81ad021a3a9",
+      "created_at": "2023-11-07T05:31:56Z",
+      "modified_at": "2023-11-07T05:31:56Z",
+      "granted_at": "2025-01-03T13:37:00Z",
+      "benefit_id": "397a17aa-15cf-4cb4-9333-18040203cf98",
+      "benefit_type": "custom",
+      "properties": {
+        "account_id": "<string>",
+        "guild_id": "<string>",
+        "role_id": "<string>"
+      }
+    }
+  ],
+  "avatar_url": "https://www.gravatar.com/avatar/xxx?d=blank"
+}

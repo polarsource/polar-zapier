@@ -87,8 +87,69 @@ const loadSample = (event) => {
   return require(`./samples/${event}.json`);
 };
 
-/** @type {{ event: string; path: string; sorting: string, key: string; label: string; description: string; noun: string, sample: object }[]} */
+/** @type {{ event: string; path: string; sorting: string, key: string; label: string; description: string; noun: string, sample: object }|{ event: string; performList: (z, bundle) => Promise<Record<string, any>>, key: string; label: string; description: string; noun: string, sample: object }[]} */
 const TRIGGER_DEFINITIONS = [
+  {
+    event: 'customer.created',
+    path: '/v1/customers/',
+    sorting: '-created_at',
+    key: 'customer_created',
+    label: 'Customer Created',
+    description: 'Triggers when a new customer is created.',
+    noun: 'Customer',
+    sample: loadSample('customer'),
+  },
+  {
+    event: 'customer.updated',
+    path: '/v1/customers/',
+    sorting: '-created_at',
+    key: 'customer_updated',
+    label: 'Customer Updated',
+    description: 'Triggers when a customer is updated.',
+    noun: 'Customer',
+    sample: loadSample('customer'),
+  },
+  {
+    event: 'customer.deleted',
+    path: '/v1/customers/',
+    sorting: '-created_at',
+    key: 'customer_deleted',
+    label: 'Customer Deleted',
+    description: 'Triggers when a customer is deleted.',
+    noun: 'Customer',
+    sample: loadSample('customer'),
+  },
+  {
+    event: 'customer.state_changed',
+    performList: async (z, bundle) => {
+      const items = await performList('/v1/customers/', '-created_at')(z, bundle);
+      if (items.length === 0) {
+        return [];
+      }
+      const customer = items[0];
+      const customerState = await z
+        .request({
+          url: `${getAPIURL(bundle.authData.environment)}/v1/customers/${customer.id}/state`,
+          method: 'GET',
+          headers: {
+            Accept: 'application/json',
+          },
+          removeMissingValuesFrom: {
+            body: false,
+            params: false,
+          },
+        })
+        .then((response) => response.json);
+      return [customerState];
+    },
+    path: '/v1/customers/',
+    sorting: '-created_at',
+    key: 'customer_state_changed',
+    label: 'Customer State Changed',
+    description: 'Triggers when a customer state has changed.',
+    noun: 'Customer State',
+    sample: loadSample('customer_state'),
+  },
   {
     event: 'order.created',
     path: '/v1/orders/',
@@ -211,22 +272,24 @@ const TRIGGER_DEFINITIONS = [
   },
 ];
 
-const TRIGGERS = TRIGGER_DEFINITIONS.map(({ event, path, sorting, key, label, description, noun, sample }) => ({
-  operation: {
-    perform: perform,
-    type: 'hook',
-    performUnsubscribe: performUnsubscribe,
-    performSubscribe: performSubscribe(event),
-    performList: performList(path, sorting),
-    sample,
-  },
-  display: {
-    description,
-    hidden: false,
-    label,
-  },
-  key,
-  noun,
-}));
+const TRIGGERS = TRIGGER_DEFINITIONS.map(
+  ({ event, path, sorting, performList: _performList, key, label, description, noun, sample }) => ({
+    operation: {
+      perform: perform,
+      type: 'hook',
+      performUnsubscribe: performUnsubscribe,
+      performSubscribe: performSubscribe(event),
+      performList: _performList ? _performList : performList(path, sorting),
+      sample,
+    },
+    display: {
+      description,
+      hidden: false,
+      label,
+    },
+    key,
+    noun,
+  }),
+);
 
 module.exports = TRIGGERS;
