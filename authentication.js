@@ -39,6 +39,7 @@ const getAccessToken = async (z, bundle) => {
     headers: {
       'content-type': 'application/x-www-form-urlencoded',
       accept: 'application/json',
+      authorization: null,
     },
     params: {},
     body: {
@@ -71,6 +72,7 @@ const refreshAccessToken = async (z, bundle) => {
     headers: {
       'content-type': 'application/x-www-form-urlencoded',
       accept: 'application/json',
+      authorization: null,
     },
     params: {},
     body: {
