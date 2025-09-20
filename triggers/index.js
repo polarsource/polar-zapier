@@ -161,6 +161,16 @@ const TRIGGER_DEFINITIONS = [
     sample: loadSample('order'),
   },
   {
+    event: 'order.paid',
+    path: '/v1/orders/',
+    sorting: '-created_at',
+    key: 'order_paid',
+    label: 'Order Paid',
+    description: 'Triggers when an order is paid.',
+    noun: 'Order',
+    sample: loadSample('order'),
+  },
+  {
     event: 'benefit.created',
     path: '/v1/benefits/',
     sorting: '',
