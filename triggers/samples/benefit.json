@@ -1,14 +1,14 @@
 {
+  "id": "<string>",
   "created_at": "2023-11-07T05:31:56Z",
   "modified_at": "2023-11-07T05:31:56Z",
-  "id": "<string>",
   "type": "custom",
   "description": "<string>",
   "selectable": true,
   "deletable": true,
   "organization_id": "<string>",
+  "metadata": {},
   "properties": {
     "note": "<string>"
-  },
-  "is_tax_applicable": true
+  }
 }

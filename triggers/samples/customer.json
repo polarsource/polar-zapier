@@ -1,12 +1,13 @@
 {
-  "id": "992fae2a-2a17-4b7a-8d9e-e287cf90131b",
+  "id": "<string>",
   "created_at": "2023-11-07T05:31:56Z",
   "modified_at": "2023-11-07T05:31:56Z",
   "metadata": {},
-  "external_id": "usr_1337",
-  "email": "customer@example.com",
+  "external_id": "<string>",
+  "email": "<string>",
   "email_verified": true,
-  "name": "John Doe",
+  "type": "individual",
+  "name": "<string>",
   "billing_address": {
     "line1": "<string>",
     "line2": "<string>",
@@ -15,7 +16,8 @@
     "state": "<string>",
     "country": "US"
   },
-  "tax_id": ["911144442", "us_ein"],
-  "organization_id": "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
-  "avatar_url": "https://www.gravatar.com/avatar/xxx?d=blank"
+  "tax_id": ["<string>", "us_ein"],
+  "organization_id": "<string>",
+  "deleted_at": null,
+  "avatar_url": "<string>"
 }

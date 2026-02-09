@@ -2,48 +2,80 @@
   "created_at": "2023-11-07T05:31:56Z",
   "modified_at": "2023-11-07T05:31:56Z",
   "id": "<string>",
-  "amount": 123,
-  "currency": "<string>",
+  "amount": 10000,
+  "currency": "usd",
   "recurring_interval": "month",
-  "status": "incomplete",
+  "recurring_interval_count": 1,
+  "status": "active",
   "current_period_start": "2023-11-07T05:31:56Z",
   "current_period_end": "2023-11-07T05:31:56Z",
-  "cancel_at_period_end": true,
+  "trial_start": "2023-11-07T05:31:56Z",
+  "trial_end": "2023-11-07T05:31:56Z",
+  "cancel_at_period_end": false,
   "canceled_at": "2023-11-07T05:31:56Z",
   "started_at": "2023-11-07T05:31:56Z",
   "ends_at": "2023-11-07T05:31:56Z",
   "ended_at": "2023-11-07T05:31:56Z",
   "customer_id": "<string>",
   "product_id": "<string>",
-  "price_id": "<string>",
   "discount_id": "<string>",
   "checkout_id": "<string>",
-  "customer_cancellation_reason": "customer_service",
+  "seats": 1,
+  "customer_cancellation_reason": "<string>",
   "customer_cancellation_comment": "<string>",
-  "user_id": "<string>",
+  "metadata": {},
+  "custom_field_data": {},
+  "customer": {
+    "created_at": "2023-11-07T05:31:56Z",
+    "modified_at": "2023-11-07T05:31:56Z",
+    "id": "<string>",
+    "metadata": {},
+    "external_id": "<string>",
+    "email": "<string>",
+    "email_verified": true,
+    "type": "individual",
+    "name": "<string>",
+    "billing_address": {
+      "line1": "<string>",
+      "line2": "<string>",
+      "postal_code": "<string>",
+      "city": "<string>",
+      "state": "<string>",
+      "country": "US"
+    },
+    "tax_id": ["<string>", "us_ein"],
+    "organization_id": "<string>",
+    "deleted_at": null,
+    "avatar_url": "<string>"
+  },
   "product": {
     "created_at": "2023-11-07T05:31:56Z",
     "modified_at": "2023-11-07T05:31:56Z",
     "id": "<string>",
+    "trial_interval": "month",
+    "trial_interval_count": 1,
     "name": "<string>",
     "description": "<string>",
+    "visibility": "public",
     "recurring_interval": "month",
+    "recurring_interval_count": 1,
     "is_recurring": true,
-    "is_archived": true,
+    "is_archived": false,
     "organization_id": "<string>",
+    "metadata": {},
     "prices": [
       {
         "created_at": "2023-11-07T05:31:56Z",
         "modified_at": "2023-11-07T05:31:56Z",
         "id": "<string>",
         "amount_type": "<string>",
-        "is_archived": true,
+        "is_archived": false,
         "product_id": "<string>",
         "type": "<string>",
         "recurring_interval": "month",
         "price_currency": "<string>",
         "price_amount": 123,
-        "legacy": true
+        "legacy": false
       }
     ],
     "benefits": [
@@ -55,7 +87,11 @@
         "description": "<string>",
         "selectable": true,
         "deletable": true,
-        "organization_id": "<string>"
+        "organization_id": "<string>",
+        "metadata": {},
+        "properties": {
+          "note": "<string>"
+        }
       }
     ],
     "medias": [
@@ -79,56 +115,41 @@
         "public_url": "<string>"
       }
     ],
-    "organization": {
+    "attached_custom_fields": []
+  },
+  "discount": {
+    "duration": "once",
+    "type": "fixed",
+    "amount": 123,
+    "currency": "<string>",
+    "id": "<string>",
+    "name": "<string>",
+    "code": "<string>"
+  },
+  "prices": [
+    {
       "created_at": "2023-11-07T05:31:56Z",
       "modified_at": "2023-11-07T05:31:56Z",
-      "id": "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
-      "name": "<string>",
-      "slug": "<string>",
-      "avatar_url": "<string>",
-      "bio": "<string>",
-      "company": "<string>",
-      "blog": "<string>",
-      "location": "<string>",
-      "email": "<string>",
-      "twitter_username": "<string>",
-      "pledge_minimum_amount": 123,
-      "pledge_badge_show_amount": true,
-      "default_upfront_split_to_contributors": 123,
-      "profile_settings": {
-        "enabled": true,
-        "description": "<string>",
-        "featured_projects": ["<string>"],
-        "featured_organizations": ["<string>"],
-        "links": ["<string>"],
-        "subscribe": {
-          "promote": true,
-          "show_count": true,
-          "count_free": true
-        },
-        "accent_color": "<string>"
-      },
-      "feature_settings": {
-        "issue_funding_enabled": false
-      },
-      "subscription_settings": {
-        "allow_multiple_subscriptions": true,
-        "allow_customer_updates": true,
-        "proration_behavior": "invoice"
-      }
+      "id": "<string>",
+      "amount_type": "<string>",
+      "is_archived": false,
+      "product_id": "<string>",
+      "type": "<string>",
+      "recurring_interval": "month",
+      "price_currency": "<string>",
+      "price_amount": 123,
+      "legacy": false
     }
-  },
-  "price": {
-    "created_at": "2023-11-07T05:31:56Z",
-    "modified_at": "2023-11-07T05:31:56Z",
-    "id": "<string>",
-    "amount_type": "<string>",
-    "is_archived": true,
-    "product_id": "<string>",
-    "type": "<string>",
-    "recurring_interval": "month",
-    "price_currency": "<string>",
-    "price_amount": 123,
-    "legacy": true
-  }
+  ],
+  "meters": [
+    {
+      "id": "<string>",
+      "created_at": "2023-11-07T05:31:56Z",
+      "modified_at": "2023-11-07T05:31:56Z",
+      "subscription_id": "<string>",
+      "meter_id": "<string>",
+      "value": 123,
+      "metadata": {}
+    }
+  ]
 }

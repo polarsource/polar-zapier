@@ -1,12 +1,13 @@
 {
-  "id": "992fae2a-2a17-4b7a-8d9e-e287cf90131b",
+  "id": "<string>",
   "created_at": "2023-11-07T05:31:56Z",
   "modified_at": "2023-11-07T05:31:56Z",
   "metadata": {},
-  "external_id": "usr_1337",
-  "email": "customer@example.com",
+  "external_id": "<string>",
+  "email": "<string>",
   "email_verified": true,
-  "name": "John Doe",
+  "type": "individual",
+  "name": "<string>",
   "billing_address": {
     "line1": "<string>",
     "line2": "<string>",
@@ -15,44 +16,96 @@
     "state": "<string>",
     "country": "US"
   },
-  "tax_id": ["911144442", "us_ein"],
-  "organization_id": "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
+  "tax_id": ["<string>", "us_ein"],
+  "organization_id": "<string>",
+  "deleted_at": null,
   "active_subscriptions": [
     {
-      "id": "e5149aae-e521-42b9-b24c-abb3d71eea2e",
+      "id": "<string>",
       "created_at": "2023-11-07T05:31:56Z",
       "modified_at": "2023-11-07T05:31:56Z",
-      "custom_field_data": {},
-      "metadata": {},
-      "status": "active",
-      "amount": 1000,
-      "currency": "usd",
+      "amount": 123,
+      "currency": "<string>",
       "recurring_interval": "month",
-      "current_period_start": "2025-02-03T13:37:00Z",
-      "current_period_end": "2025-03-03T13:37:00Z",
+      "recurring_interval_count": 1,
+      "status": "active",
+      "current_period_start": "2023-11-07T05:31:56Z",
+      "current_period_end": "2023-11-07T05:31:56Z",
+      "trial_start": "2023-11-07T05:31:56Z",
+      "trial_end": "2023-11-07T05:31:56Z",
       "cancel_at_period_end": false,
-      "canceled_at": null,
-      "started_at": "2025-01-03T13:37:00Z",
-      "ends_at": null,
-      "product_id": "d8dd2de1-21b7-4a41-8bc3-ce909c0cfe23",
-      "price_id": "196ca717-4d84-4d28-a1b8-777255797dbc",
-      "discount_id": null
+      "canceled_at": "2023-11-07T05:31:56Z",
+      "started_at": "2023-11-07T05:31:56Z",
+      "ends_at": "2023-11-07T05:31:56Z",
+      "ended_at": "2023-11-07T05:31:56Z",
+      "customer_id": "<string>",
+      "product_id": "<string>",
+      "discount_id": "<string>",
+      "checkout_id": "<string>",
+      "seats": 1,
+      "customer_cancellation_reason": "<string>",
+      "customer_cancellation_comment": "<string>",
+      "metadata": {},
+      "custom_field_data": {},
+      "customer": "<string>",
+      "product": "<string>",
+      "discount": "<string>",
+      "prices": [
+        {
+          "created_at": "2023-11-07T05:31:56Z",
+          "modified_at": "2023-11-07T05:31:56Z",
+          "id": "<string>",
+          "amount_type": "<string>",
+          "is_archived": false,
+          "product_id": "<string>",
+          "type": "<string>",
+          "recurring_interval": "month",
+          "price_currency": "<string>",
+          "price_amount": 123,
+          "legacy": false
+        }
+      ],
+      "meters": [
+        {
+          "id": "<string>",
+          "created_at": "2023-11-07T05:31:56Z",
+          "modified_at": "2023-11-07T05:31:56Z",
+          "subscription_id": "<string>",
+          "meter_id": "<string>",
+          "value": 123,
+          "metadata": {}
+        }
+      ]
     }
   ],
   "granted_benefits": [
     {
-      "id": "d322132c-a9d0-4e0d-b8d3-d81ad021a3a9",
+      "id": "<string>",
       "created_at": "2023-11-07T05:31:56Z",
       "modified_at": "2023-11-07T05:31:56Z",
-      "granted_at": "2025-01-03T13:37:00Z",
-      "benefit_id": "397a17aa-15cf-4cb4-9333-18040203cf98",
-      "benefit_type": "custom",
-      "properties": {
-        "account_id": "<string>",
-        "guild_id": "<string>",
-        "role_id": "<string>"
-      }
+      "benefit_id": "<string>",
+      "customer_id": "<string>",
+      "subscription_id": "<string>",
+      "starts_at": "2023-11-07T05:31:56Z",
+      "expires_at": "2023-11-07T05:31:56Z",
+      "granted_by": "<string>",
+      "revoked_at": "2023-11-07T05:31:56Z",
+      "revoked_by": "<string>",
+      "revoked_reason": "<string>",
+      "metadata": {},
+      "properties": "<string>"
     }
   ],
-  "avatar_url": "https://www.gravatar.com/avatar/xxx?d=blank"
+  "active_meters": [
+    {
+      "id": "<string>",
+      "created_at": "2023-11-07T05:31:56Z",
+      "modified_at": "2023-11-07T05:31:56Z",
+      "customer_id": "<string>",
+      "meter_id": "<string>",
+      "value": 123,
+      "metadata": {}
+    }
+  ],
+  "avatar_url": "<string>"
 }

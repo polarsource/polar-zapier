@@ -1,7 +1,7 @@
 {
+  "id": "<string>",
   "created_at": "2023-11-07T05:31:56Z",
   "modified_at": "2023-11-07T05:31:56Z",
-  "id": "<string>",
   "custom_field_data": {},
   "payment_processor": "stripe",
   "status": "open",
@@ -9,25 +9,37 @@
   "url": "<string>",
   "expires_at": "2023-11-07T05:31:56Z",
   "success_url": "<string>",
-  "embed_origin": "<string>",
+  "return_url": null,
+  "embed_origin": null,
   "amount": 50000024,
+  "seats": null,
+  "price_per_seat": null,
+  "discount_amount": 0,
+  "net_amount": 50000024,
   "tax_amount": 123,
+  "total_amount": 50000024,
   "currency": "<string>",
-  "subtotal_amount": 123,
-  "total_amount": 123,
+  "allow_trial": null,
+  "active_trial_interval": null,
+  "active_trial_interval_count": null,
+  "trial_end": null,
+  "organization_id": "<string>",
   "product_id": "<string>",
   "product_price_id": "<string>",
   "discount_id": "<string>",
   "allow_discount_codes": true,
+  "require_billing_address": false,
   "is_discount_applicable": true,
-  "is_free_product_price": true,
+  "is_free_product_price": false,
   "is_payment_required": true,
   "is_payment_setup_required": true,
   "is_payment_form_required": true,
   "customer_id": "<string>",
+  "is_business_customer": false,
   "customer_name": "<string>",
   "customer_email": "<string>",
   "customer_ip_address": "<string>",
+  "customer_billing_name": null,
   "customer_billing_address": {
     "line1": "<string>",
     "line2": "<string>",
@@ -38,7 +50,14 @@
   },
   "customer_tax_id": "<string>",
   "payment_processor_metadata": {},
+  "billing_address_fields": {
+    "mode": "auto"
+  },
+  "trial_interval": null,
+  "trial_interval_count": null,
   "metadata": {},
+  "external_customer_id": null,
+  "customer_external_id": null,
   "products": [
     {
       "created_at": "2023-11-07T05:31:56Z",
@@ -48,7 +67,7 @@
       "description": "<string>",
       "recurring_interval": "month",
       "is_recurring": true,
-      "is_archived": true,
+      "is_archived": false,
       "organization_id": "<string>",
       "prices": [
         {
@@ -56,13 +75,13 @@
           "modified_at": "2023-11-07T05:31:56Z",
           "id": "<string>",
           "amount_type": "<string>",
-          "is_archived": true,
+          "is_archived": false,
           "product_id": "<string>",
           "type": "<string>",
           "recurring_interval": "month",
           "price_currency": "<string>",
           "price_amount": 123,
-          "legacy": true
+          "legacy": false
         }
       ],
       "benefits": [
@@ -108,7 +127,7 @@
     "description": "<string>",
     "recurring_interval": "month",
     "is_recurring": true,
-    "is_archived": true,
+    "is_archived": false,
     "organization_id": "<string>",
     "prices": [
       {
@@ -116,13 +135,13 @@
         "modified_at": "2023-11-07T05:31:56Z",
         "id": "<string>",
         "amount_type": "<string>",
-        "is_archived": true,
+        "is_archived": false,
         "product_id": "<string>",
         "type": "<string>",
         "recurring_interval": "month",
         "price_currency": "<string>",
         "price_amount": 123,
-        "legacy": true
+        "legacy": false
       }
     ],
     "benefits": [
@@ -164,14 +183,15 @@
     "modified_at": "2023-11-07T05:31:56Z",
     "id": "<string>",
     "amount_type": "<string>",
-    "is_archived": true,
+    "is_archived": false,
     "product_id": "<string>",
     "type": "<string>",
     "recurring_interval": "month",
     "price_currency": "<string>",
     "price_amount": 123,
-    "legacy": true
+    "legacy": false
   },
+  "prices": null,
   "discount": {
     "duration": "once",
     "type": "fixed",

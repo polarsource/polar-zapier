@@ -1,16 +1,21 @@
 {
+  "id": "<string>",
   "created_at": "2023-11-07T05:31:56Z",
   "modified_at": "2023-11-07T05:31:56Z",
-  "id": "<string>",
-  "metadata": {},
-  "custom_field_data": {},
-  "status": "<string>",
-  "amount": 123,
-  "tax_amount": 123,
-  "refunded_amount": 123,
-  "refunded_tax_amount": 123,
-  "currency": "<string>",
-  "billing_reason": "purchase",
+  "status": "paid",
+  "paid": true,
+  "subtotal_amount": 10000,
+  "discount_amount": 1000,
+  "net_amount": 9000,
+  "tax_amount": 720,
+  "total_amount": 9720,
+  "applied_balance_amount": 0,
+  "due_amount": 0,
+  "refunded_amount": 0,
+  "refunded_tax_amount": 0,
+  "currency": "usd",
+  "billing_reason": "subscription_create",
+  "billing_name": "<string>",
   "billing_address": {
     "line1": "<string>",
     "line2": "<string>",
@@ -19,105 +24,163 @@
     "state": "<string>",
     "country": "US"
   },
+  "invoice_number": "<string>",
+  "is_invoice_generated": true,
+  "seats": 1,
   "customer_id": "<string>",
   "product_id": "<string>",
-  "product_price_id": "<string>",
   "discount_id": "<string>",
   "subscription_id": "<string>",
   "checkout_id": "<string>",
-  "customer": {
-    "id": "992fae2a-2a17-4b7a-8d9e-e287cf90131b",
-    "created_at": "2023-11-07T05:31:56Z",
-    "modified_at": "2023-11-07T05:31:56Z",
-    "metadata": {},
-    "external_id": "usr_1337",
-    "email": "customer@example.com",
-    "email_verified": true,
-    "name": "John Doe",
-    "billing_address": {
-      "line1": "<string>",
-      "line2": "<string>",
-      "postal_code": "<string>",
-      "city": "<string>",
-      "state": "<string>",
-      "country": "US"
-    },
-    "tax_id": ["911144442", "us_ein"],
-    "organization_id": "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
-    "avatar_url": "https://www.gravatar.com/avatar/xxx?d=blank"
-  },
+  "metadata": {},
+  "custom_field_data": {},
+  "platform_fee_amount": 500,
+  "platform_fee_currency": "usd",
+  "customer": "<string>",
   "user_id": "<string>",
-  "user": {
-    "id": "<string>",
-    "email": "<string>",
-    "public_name": "<string>",
-    "avatar_url": "<string>",
-    "github_username": "<string>"
-  },
   "product": {
     "created_at": "2023-11-07T05:31:56Z",
     "modified_at": "2023-11-07T05:31:56Z",
     "id": "<string>",
+    "trial_interval": "month",
+    "trial_interval_count": 1,
     "name": "<string>",
     "description": "<string>",
+    "visibility": "public",
     "recurring_interval": "month",
+    "recurring_interval_count": 1,
     "is_recurring": true,
-    "is_archived": true,
-    "organization_id": "<string>"
-  },
-  "product_price": {
-    "created_at": "2023-11-07T05:31:56Z",
-    "modified_at": "2023-11-07T05:31:56Z",
-    "id": "<string>",
-    "amount_type": "<string>",
-    "is_archived": true,
-    "product_id": "<string>",
-    "type": "<string>",
-    "recurring_interval": "month",
-    "price_currency": "<string>",
-    "price_amount": 123,
-    "legacy": true
+    "is_archived": false,
+    "organization_id": "<string>",
+    "metadata": {},
+    "prices": [
+      {
+        "created_at": "2023-11-07T05:31:56Z",
+        "modified_at": "2023-11-07T05:31:56Z",
+        "id": "<string>",
+        "amount_type": "<string>",
+        "is_archived": false,
+        "product_id": "<string>",
+        "type": "<string>",
+        "recurring_interval": "month",
+        "price_currency": "<string>",
+        "price_amount": 123,
+        "legacy": false
+      }
+    ],
+    "benefits": [
+      {
+        "created_at": "2023-11-07T05:31:56Z",
+        "modified_at": "2023-11-07T05:31:56Z",
+        "id": "<string>",
+        "type": "custom",
+        "description": "<string>",
+        "selectable": true,
+        "deletable": true,
+        "organization_id": "<string>",
+        "metadata": {},
+        "properties": {
+          "note": "<string>"
+        }
+      }
+    ],
+    "medias": [
+      {
+        "id": "<string>",
+        "organization_id": "<string>",
+        "name": "<string>",
+        "path": "<string>",
+        "mime_type": "<string>",
+        "size": 123,
+        "storage_version": "<string>",
+        "checksum_etag": "<string>",
+        "checksum_sha256_base64": "<string>",
+        "checksum_sha256_hex": "<string>",
+        "last_modified_at": "2023-11-07T05:31:56Z",
+        "version": "<string>",
+        "service": "<string>",
+        "is_uploaded": true,
+        "created_at": "2023-11-07T05:31:56Z",
+        "size_readable": "<string>",
+        "public_url": "<string>"
+      }
+    ],
+    "attached_custom_fields": []
   },
   "discount": {
     "duration": "once",
     "type": "fixed",
     "amount": 123,
     "currency": "<string>",
-    "created_at": "2023-11-07T05:31:56Z",
-    "modified_at": "2023-11-07T05:31:56Z",
     "id": "<string>",
-    "metadata": {},
     "name": "<string>",
-    "code": "<string>",
-    "starts_at": "2023-11-07T05:31:56Z",
-    "ends_at": "2023-11-07T05:31:56Z",
-    "max_redemptions": 123,
-    "redemptions_count": 123,
-    "organization_id": "1dbfc517-0bbf-4301-9ba8-555ca42b9737"
+    "code": "<string>"
   },
   "subscription": {
-    "metadata": {},
     "created_at": "2023-11-07T05:31:56Z",
     "modified_at": "2023-11-07T05:31:56Z",
     "id": "<string>",
     "amount": 123,
     "currency": "<string>",
     "recurring_interval": "month",
-    "status": "incomplete",
+    "recurring_interval_count": 1,
+    "status": "active",
     "current_period_start": "2023-11-07T05:31:56Z",
     "current_period_end": "2023-11-07T05:31:56Z",
-    "cancel_at_period_end": true,
+    "trial_start": "2023-11-07T05:31:56Z",
+    "trial_end": "2023-11-07T05:31:56Z",
+    "cancel_at_period_end": false,
     "canceled_at": "2023-11-07T05:31:56Z",
     "started_at": "2023-11-07T05:31:56Z",
     "ends_at": "2023-11-07T05:31:56Z",
     "ended_at": "2023-11-07T05:31:56Z",
     "customer_id": "<string>",
     "product_id": "<string>",
-    "price_id": "<string>",
     "discount_id": "<string>",
     "checkout_id": "<string>",
-    "customer_cancellation_reason": "customer_service",
+    "seats": 1,
+    "customer_cancellation_reason": "<string>",
     "customer_cancellation_comment": "<string>",
-    "user_id": "<string>"
-  }
+    "metadata": {},
+    "custom_field_data": {},
+    "customer": "<string>",
+    "product": "<string>",
+    "discount": "<string>",
+    "prices": [
+      {
+        "created_at": "2023-11-07T05:31:56Z",
+        "modified_at": "2023-11-07T05:31:56Z",
+        "id": "<string>",
+        "amount_type": "<string>",
+        "is_archived": false,
+        "product_id": "<string>",
+        "type": "<string>",
+        "recurring_interval": "month",
+        "price_currency": "<string>",
+        "price_amount": 123,
+        "legacy": false
+      }
+    ],
+    "meters": [
+      {
+        "id": "<string>",
+        "created_at": "2023-11-07T05:31:56Z",
+        "modified_at": "2023-11-07T05:31:56Z",
+        "subscription_id": "<string>",
+        "meter_id": "<string>",
+        "value": 123,
+        "metadata": {}
+      }
+    ]
+  },
+  "items": [
+    {
+      "amount": 123,
+      "currency": "<string>",
+      "description": "<string>",
+      "quantity": 1,
+      "metadata": {}
+    }
+  ],
+  "description": "<string>"
 }
