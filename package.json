@@ -12,11 +12,11 @@
     "npm": ">=5.6.0"
   },
   "dependencies": {
-    "zapier-platform-core": "17.7.0"
+    "zapier-platform-core": "18.1.1"
   },
   "devDependencies": {
-    "jest": "^29.6.0",
-    "prettier": "^3.5.3"
+    "jest": "^30.2.0",
+    "prettier": "^3.8.1"
   },
   "private": true,
   "zapier": {
