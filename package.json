@@ -1,6 +1,6 @@
 {
   "name": "polar",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An Open Source Lemon Squeezy alternative with better pricing! Get paid coding on your passion.",
   "main": "index.js",
   "scripts": {
